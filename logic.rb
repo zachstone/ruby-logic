@@ -100,13 +100,6 @@ class XnorGate < Node
   end
 end
 
-def probe2(func)
-  puts "  i   |   i   |   o"
-  puts "false | false | #{send(func, false, false)}"
-  puts "false | true  | #{send(func, false, true)}"
-  puts "true  | true  | #{send(func, true, true)}"
-end
-
 class Circuit
   attr_reader :logic_nodes, :inputs, :outputs
 

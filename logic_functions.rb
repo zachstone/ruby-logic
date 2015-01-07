@@ -46,3 +46,10 @@ def xnor?(x, y)
   # 1|1|1
   x == y
 end
+
+def probe2(func)
+  puts "  i   |   i   |   o"
+  puts "false | false | #{send(func, false, false)}"
+  puts "false | true  | #{send(func, false, true)}"
+  puts "true  | true  | #{send(func, true, true)}"
+end
